@@ -10,21 +10,21 @@ import gc
 esp.osdebug(None)
 gc.collect()
 
-ssid = 'ShubhamPagal'                  #Set access point name 
-password = '12345678'      #Set your access point password
+ssid = 'Access_point_name'                  #Set access point name 
+password = 'Access_point_password'      #Set your access point password
 
 led=Pin(2,Pin.OUT)                          # Onboard LED on Pin 2 of ESP32
 
 temp = 0
 
-WIFI_SSID     = 'sonal'
-WIFI_PASSWORD = 'shubham1'
+WIFI_SSID     = 'wifi_ssid'    #type in ssid
+WIFI_PASSWORD = 'wifi_password' #type in password
 
 mqtt_client_id      = bytes('client_'+'12321', 'utf-8') # Just a random client ID
 
 ADAFRUIT_IO_URL     = 'io.adafruit.com' 
-ADAFRUIT_USERNAME   = 'onalsingh'
-ADAFRUIT_IO_KEY     = 'aio_mxlV49DeYDRqMME7TI6rfLogApOh'
+ADAFRUIT_USERNAME   = 'adafruit_username' #input adafruit username
+ADAFRUIT_IO_KEY     = 'adafruit_key'    #input adafruit key
 
 TOGGLE_FEED_ID      = 'led'
 RANGE_FEED_ID_1      = 'wifi-range'
@@ -48,7 +48,7 @@ def access_point():
                   else:
                     gpio_state="OFF"
                   
-                  html = """<html><head> <title>ESP Web Server</title> <meta name="viewport" content="width=device-width, initial-scale=1">
+                  html = """<html><head> <title>Forget Me Not</title> <meta name="viewport" content="width=device-width, initial-scale=1">
                   <link rel="icon" href="data:,"> <style>html{font-family: Helvetica; display:inline-block; margin: 0px auto; text-align: center;}
                   h1{color: #0F3376; padding: 2vh;}p{font-size: 1.5rem;}.button{display: inline-block; background-color: #e7bd3b; border: none; 
                   border-radius: 4px; color: white; padding: 16px 40px; text-decoration: none; font-size: 30px; margin: 2px; cursor: pointer;}
